@@ -15,6 +15,7 @@
 if (!function_exists('curl_init')) {
   throw new Exception('This library needs the CURL PHP extension.');
 }
+
 /**
  * This class object
  */
@@ -28,13 +29,13 @@ class Ym {
 	 * Constructor
 	 * Configure API setting
 	 */
-    function __construct($params = array()) {
-        if (count($params) > 0) {
+	function __construct($params = array()) {
+		if (count($params) > 0) {
 			foreach ($params as $key=>$value) {
 				$this->$key = $value;
-			}
-		}
-    }
+	 		}
+	 	}
+	}
 	
 	// --------------------------------------------------------------------
 	
@@ -99,4 +100,5 @@ class Ym {
 		}
 	}
 }
-?>
+
+/* end of file */
